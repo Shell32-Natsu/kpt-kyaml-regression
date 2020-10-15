@@ -32,7 +32,6 @@ jobs:
         with:
           repository: kubernetes-sigs/kustomize
           path: kustomize
-          ref: kyaml/v0.9.1 
           
       - name: Replace modules
         shell: bash
