@@ -39,6 +39,10 @@ jobs:
         working-directory: ./kpt
         run: echo -e "replace sigs.k8s.io/kustomize/cmd/config => ../kustomize/cmd/config\nreplace sigs.k8s.io/kustomize/kyaml => ../kustomize/kyaml" >> go.mod; cat go.mod
       
+      - name: Setup Git
+        shell: bash
+        run: git config --global user.name "test"; git config --global user.email "test@example.com"
+      
       - name: Run test
         shell: bash
         working-directory: ./kpt
