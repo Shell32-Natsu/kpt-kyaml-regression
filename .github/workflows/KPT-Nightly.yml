@@ -30,10 +30,8 @@ jobs:
           
       - uses: actions/checkout@v2.3.3
         with:
-          #repository: kubernetes-sigs/kustomize
-          repository: natasha41575/kustomize
+          repository: kubernetes-sigs/kustomize
           path: kustomize
-          ref: rollbackPortMergeKey
           
       - name: Replace modules
         shell: bash
